@@ -13,7 +13,7 @@
    <footer>
      <div class="container">
         <div class="row bg-danger p-2 mt-4">
-        <form class="row" action="result.php" method="get">
+        <form class="row" action="/formulaire/backend/index.php" method="post">
                  <?php 
                  // appelez la fonction avec "$form->"
 

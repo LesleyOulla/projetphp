@@ -1,25 +1,11 @@
 <?php 
 
 // il y a une obligation
-require('formulaire.php');
+require('classes/formulaire.php');
 //appel de la classe dans la fonction
 $Form = new Form();
-function Input($size, $name, $label, $type, $placeholder) {
-    $un = '<div class="col-md-'.$size.'">
-    <div class="mb-3">';
-$deux = '';
-$trois =  '<input type="'.$type.'" name="'.$name.'" class="form-control" id="'.$name.'" placeholder="'.$placeholder.'">
-    </div>
-</div>';
 
-    if ($type != 'submit') {
-
-        $deux = '<label for="'.$name.'" class="form-label">'.$label.'</label>';
-    }
-
-    return $un.$deux.$trois;
-}
-    ?>
+?>
 <!doctype html>
 <html lang="fr">
   <head>
@@ -34,7 +20,7 @@ $trois =  '<input type="'.$type.'" name="'.$name.'" class="form-control" id="'.$
    <footer>
      <div class="container">
         <div class="row bg-danger p-2 mt-4">
-        <form class="row" action="result.php" method="get">
+        <form class="row" action="/formulaire/backend/index.php" method="post">
                  <?php 
                  // appelez la fonction avec "$form->"
                  echo $Form->Input("4", "nom", "Votre nom", "text", "Entrer un nom");
