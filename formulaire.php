@@ -1,10 +1,19 @@
-<div class="container">
-        <div class="row bg-danger p-2 mt-4">
-        <form action="result.php" method = "get">
-        '<div class="col-md-4">
-                     <label for= "nom"class="form-label text-light"></label>
-                     <input type="nom" name="nom" class="form-control" id="nom" placeholder="nom"/></input>
-            </div>
-            </form>
-        </div>
-</div>
+<?php
+    class Form {
+        public function Input($size, $name, $label, $type, $placeholder) {
+            $un = '<div class="col-md-'.$size.'">
+                        <div class="mb-3">';
+            $deux = '';
+            $trois =  '<input type="'.$type.'" name="'.$name.'" class="form-control" id="'.$name.'" placeholder="'.$placeholder.'">
+                        </div>
+                    </div>';
+    
+            if ($type != 'submit') {
+    
+                $deux = '<label for="'.$name.'" class="form-label">'.$label.'</label>';
+            }
+    
+            return $un.$deux.$trois;            
+        }
+    }
+?>

@@ -17,10 +17,9 @@
                  <?php 
                  // appelez la fonction avec "$form->"
 
-                 echo $form->Input("4", "email", "Votre email", "email", "Entrer un email");
-                 echo $form->Input("4", "password", "Votre mot de passe", "password", "Entrer un mot de passe");
-                 echo $form->Input("4", "password2", "Votre confirmation de mot de passe", "password", "Entrer un mot de passe");
-                 echo $form->Input("4", "Envoyer", "Envoyer", "submit", "");
+                 echo $Form->Input("4", "email", "Votre email", "email", "Entrer un email");
+                 echo $Form->Input("4", "password", "Votre mot de passe", "password", "Entrer un mot de passe");
+                 echo $Form->Input("4", "Envoyer", "Envoyer", "submit", "");
                  ?>
              </form>
         </div>
