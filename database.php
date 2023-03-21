@@ -1,14 +1,13 @@
-<?php 
+<?php
 class Database {
-
-    public $host = 'localhost';
-    private  $db = 'f2i';
+    
+    private $host = 'localhost';
+    private $db = 'f2i';
     private $user = 'root';
     private $password = '';
     private $port = 3306;
 
-    public function connectDb(){
-
+    public function connectDb() {
         try {
             $pdo = new PDO(
                 'mysql:host='.
@@ -17,15 +16,15 @@ class Database {
                 $this->port
                 .';dbname='.
                 $this->db
-                .'',
-                $this->user,
+                .'', 
+                $this->user, 
                 $this->password);
-                $pdo->exec("SET CHARACTER SET utf8");
-        return $pdo;
-    } catch (Exception $e) {
-        return $e->getMessage();
-    }
+            $pdo->exec("SET CHARACTER SET utf8");
+            return $pdo;
+        } catch (Exception $e) {
+            return $e->getMessage();
+        }
+    } 
 
-    }
 }
 ?>
